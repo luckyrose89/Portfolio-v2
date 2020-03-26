@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/luckyrose89/Portfolio-v2.git",
+  "author": "avidrutham <divyamathur89@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "normalize.css": "^8.0.1"
+  }
+}
