@@ -1,0 +1,17 @@
+.slide-progress {
+  width: 40%;
+  &--bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    z-index: 6;
+  }
+
+  &--bar {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 4px;
+    margin-left: 2px;
+  }
+}

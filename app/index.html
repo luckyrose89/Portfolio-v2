@@ -7,11 +7,15 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
     <title>Divya Mathur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" style="display: none;">
       <div class="logo">
         <a href="#">Codernewbee</a>
       </div>
@@ -34,33 +38,69 @@
         </nav>
       </div>
     </header>
+    <!--Large hero slider begins-->
     <div class="large-hero">
-      <img src="assets/images/keyboard.jpg" alt="backlit keyboard image" />
-      <div class="large-hero__text-content">
-        <h1>Hi, I'm Divya Mathur</h1>
-        <h4>Let's Start</h4>
+      <div class="large-hero__slide large-hero__slide--slide1">
+        <div class="large-hero__overlay">
+          <div class="large-hero__overlay--text-content">
+            <div class="large-hero__overlay--wrapper">
+              <h1 class="headline headline__large headline--left">
+                Hi, I am Divya Mathur
+              </h1>
+              <h4
+                class="headline headline__sub-heading headline--spacing headline--left"
+              >
+                Let's Start
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
-      <img src="assets/images/source-code.jpg" alt="souce code of html file" />
-      <div class="large-hero__text-content">
-        <h1>Hi, I'm Divya Mathur</h1>
-        <h4>Let's Start</h4>
+      <div class="large-hero__slide large-hero__slide--slide2">
+        <div class="large-hero__overlay">
+          <div class="large-hero__overlay--text-content">
+            <div class="large-hero__overlay--wrapper">
+              <h1 class="headline headline__large headline--left">
+                View my last work
+              </h1>
+              <h4
+                class="headline headline__sub-heading headline--spacing headline--left"
+              >
+                My portfolio
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
-      <img
-        src="assets/images/workstation.jpg"
-        alt="web development work station"
-      />
-      <div class="large-hero__text-content">
-        <h1>Hi, I'm Divya Mathur</h1>
-        <h4>Let's Start</h4>
+      <div class="large-hero__slide large-hero__slide--slide3">
+        <div class="large-hero__overlay">
+          <div class="large-hero__overlay--text-content">
+            <div class="large-hero__overlay--wrapper">
+              <h1 class="headline headline__large headline--left">
+                Hi, I am Divya Mathur
+              </h1>
+              <h4
+                class="headline headline__sub-heading headline--spacing headline--left"
+              >
+                Let's Start
+              </h4>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="slide-buttons">
-        <button class="display-left">&#10094;</button>
-        <button class="display-right">&#10095;</button>
+
+      <div class="slide-controls slide-controls--bottom">
+        <button class="slide-controls__button slide-controls--prev">
+          &#10094;
+        </button>
+        <button class="slide-controls__button slide-controls--next">
+          &#10095;
+        </button>
       </div>
-      <div class="slide-progress">
-        <div>-</div>
-        <div>-</div>
-        <div>-</div>
+      <div class="slide-progress slide-progress--bottom">
+        <span class="slide-progress--bar"></span>
+        <span class="slide-progress--bar"></span>
+        <span class="slide-progress--bar"></span>
       </div>
     </div>
     <script src="bundled.js"></script>

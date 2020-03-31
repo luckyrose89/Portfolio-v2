@@ -1,0 +1,41 @@
+.headline {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  &__sub-heading {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+  }
+
+  &--spacing {
+    letter-spacing: 0.3rem;
+  }
+
+  @mixin atSmall {
+    &__large {
+      font-size: 4rem;
+    }
+  }
+
+  @mixin atLarge {
+    &__large {
+      font-size: 5.9rem;
+      font-weight: 500;
+    }
+
+    &--left {
+      text-align: left;
+    }
+
+    &__sub-heading {
+      padding-bottom: 8px;
+    }
+  }
+}
