@@ -7,6 +7,7 @@
     background-position: center;
     background-repeat: no repeat;
     overflow-x: hidden;
+    animation: opac 0.8s;
 
     &--slide1 {
       background-image: url("assets/images/keyboard.jpg");
@@ -31,6 +32,7 @@
     height: 100%;
     z-index: 2;
     background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-out;
 
     &--text-content {
       transition: all 0.3s ease-out;
@@ -40,27 +42,56 @@
       left: 50%;
       transform: translate(-50%, -50%);
       @mixin atLarge {
-        left: 65%;
+        left: 60%;
+        transform: translate(-50%, -20%);
+      }
+      &__centered {
+        left: 50%;
       }
     }
 
     &--wrapper {
+      &::after {
+        transition: all 0.2s ease-out;
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 4px;
+        background-color: $mainPink;
+        left: 50%;
+        bottom: -20px;
+        margin-left: -30px;
+        opacity: 0;
+      }
+
       @mixin atLarge {
         border-left: 4px solid $mainPink;
         padding-left: 1.4rem;
       }
+
+      &__centered {
+        border-left: none;
+        padding-left: 0;
+        &::after {
+          opacity: 1;
+        }
+      }
+
       @mixin atMaxMedium {
         &::after {
-          content: "";
-          position: absolute;
-          width: 70px;
-          height: 4px;
-          background-color: $mainPink;
-          left: 50%;
-          bottom: -20px;
-          margin-left: -30px;
+          opacity: 1;
         }
       }
     }
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

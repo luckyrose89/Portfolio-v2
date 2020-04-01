@@ -8,6 +8,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-out;
 
   &__sub-heading {
     font-size: 1.5rem;
@@ -21,6 +22,12 @@
   @mixin atSmall {
     &__large {
       font-size: 4rem;
+    }
+  }
+
+  @mixin atMedium {
+    &__large {
+      font-size: 4.8rem;
     }
   }
 
