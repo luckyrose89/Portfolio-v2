@@ -29,6 +29,8 @@ class SlideShow {
   showNextSlide() {
     if (this.slideIndex < this.slides.length - 1) {
       this.slideIndex++;
+    } else {
+      this.slideIndex = 0;
     }
     this.showSlide(this.slideIndex);
     this.highlightProgressBar(this.slideIndex);
@@ -37,6 +39,8 @@ class SlideShow {
   showPrevSlide() {
     if (this.slideIndex > 0) {
       this.slideIndex--;
+    } else {
+      this.slideIndex = this.slides.length - 1;
     }
     this.showSlide(this.slideIndex);
     this.highlightProgressBar(this.slideIndex);

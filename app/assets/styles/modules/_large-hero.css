@@ -1,4 +1,6 @@
 .large-hero {
+  background: $mainBlack;
+
   &__slide {
     position: relative;
     width: 100%;
@@ -7,7 +9,7 @@
     background-position: center;
     background-repeat: no repeat;
     overflow-x: hidden;
-    animation: opac 0.8s;
+    animation: opac 0.5s;
 
     &--slide1 {
       background-image: url("assets/images/keyboard.jpg");
@@ -60,7 +62,7 @@
         background-color: $mainPink;
         left: 50%;
         bottom: -20px;
-        margin-left: -30px;
+        margin-left: -35px;
         opacity: 0;
       }
 
@@ -89,6 +91,18 @@
 @keyframes opac {
   0% {
     opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
   }
 
   100% {
