@@ -63,4 +63,28 @@
       bottom: 2px;
     }
   }
+
+  &__menu-content {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -10;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease-out;
+
+    @mixin atLarge {
+      width: 40%;
+    }
+
+    &--is-visible {
+      z-index: 9;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
 }

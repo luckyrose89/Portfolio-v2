@@ -11,6 +11,7 @@ class MobileMenu {
       "site-header__menu-icon--close--barTwo",
       "site-header__menu-icon--close--barThree"
     ];
+    this.menuContent = document.querySelector(".site-header__menu-content");
     this.events();
   }
 
@@ -34,6 +35,7 @@ class MobileMenu {
 
   toggleTheMenu() {
     this.changeMenuToClose();
+    this.menuContent.classList.toggle("site-header__menu-content--is-visible");
   }
 
   changeMenuToClose() {
