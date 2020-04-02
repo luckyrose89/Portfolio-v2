@@ -1,0 +1,66 @@
+.site-header {
+  width: 100%;
+  background-color: #000000;
+  z-index: 10;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  @mixin atLarge {
+    width: 40%;
+  }
+
+  &__logo {
+    float: left;
+    height: 70px;
+    background: $mainPink;
+    max-width: 300px;
+    padding: 17px 10px;
+
+    &--text {
+      color: $darkBlack;
+      font-size: 2rem;
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__menu-icon {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    top: 22px;
+    right: 16px;
+
+    &--barOne,
+    &--barTwo,
+    &--barThree {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: #ffffff;
+      float: left;
+      position: relative;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__menu-icon--close {
+    &--barThree {
+      opacity: 0;
+    }
+
+    &--barOne {
+      transform: rotate(45deg);
+      top: 6px;
+    }
+
+    &--barTwo {
+      transform: rotate(-45deg);
+      bottom: 2px;
+    }
+  }
+}
