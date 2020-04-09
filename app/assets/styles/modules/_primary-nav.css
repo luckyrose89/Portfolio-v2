@@ -34,7 +34,14 @@
   }
 
   &__dropdown {
+    position: relative;
+    margin-bottom: 0;
     &--menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
       font-size: 1.25rem;
       transition: all 0.3s ease-out;
@@ -50,17 +57,24 @@
         display: block;
         color: #ffffff;
         padding-top: 0;
-        padding-bottom: 0.8rem;
+        padding-bottom: 1rem;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          color: $mainPink;
+        }
       }
     }
-
+    &:hover {
+      margin-bottom: 7.5rem;
+    }
     &:hover & {
       &--menu {
         height: 131px;
         opacity: 1;
         z-index: 1;
         transform: scaleY(1);
-        padding-top: 0.8rem;
+        padding-top: 2rem;
       }
     }
   }
