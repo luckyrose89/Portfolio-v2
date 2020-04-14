@@ -1,0 +1,10 @@
+.inner-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+  background: #ffffff;
+  @mixin atLarge {
+    width: 60%;
+    float: right;
+  }
+}

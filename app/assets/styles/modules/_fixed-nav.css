@@ -1,0 +1,30 @@
+.fixed-nav {
+  width: 100%;
+  background-color: #000000;
+  height: 70px;
+  float: right;
+
+  nav {
+    color: #ffffff;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0.8rem 0;
+    margin-left: 1.25rem;
+    display: flex;
+  }
+
+  &__list-item {
+    list-style: none;
+    background-color: $mainBlack;
+    padding: 4px 8px;
+  }
+
+  &__list-item a {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 36px;
+    padding: 10px;
+  }
+}

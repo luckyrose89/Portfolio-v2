@@ -8,3 +8,6 @@
 @import "./modules/_headline.css";
 @import "./modules/_slide-controls.css";
 @import "./modules/_slide-progress.css";
+@import "./modules/_fixed-column.css";
+@import "./modules/_inner-wrapper.css";
+@import "./modules/_fixed-nav.css";
