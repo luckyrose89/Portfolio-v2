@@ -40,7 +40,7 @@ class MobileMenu {
 
   changeMenuToClose() {
     this.menuIcon.classList.toggle("site-header__menu-icon--close");
-    for (var i = 0; i < this.menuBars.length; i++) {
+    for (let i = 0; i < this.menuBars.length; i++) {
       this.menuBars[i].classList.toggle(this.menuBarsModifiedClasses[i]);
     }
   }
