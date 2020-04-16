@@ -1,0 +1,20 @@
+.column {
+  &__large {
+    width: 100%;
+  }
+
+  &--content-center {
+    text-align: center;
+  }
+
+  @mixin atMedium {
+    display: flex;
+    &__large {
+      width: 45%;
+    }
+
+    &--margin-right {
+      margin-right: 1.2rem;
+    }
+  }
+}
