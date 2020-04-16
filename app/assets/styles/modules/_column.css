@@ -9,12 +9,17 @@
 
   @mixin atMedium {
     display: flex;
+
+    &__small {
+      width: 30%;
+    }
+
     &__large {
-      width: 45%;
+      width: 100%;
     }
 
     &--margin-right {
-      margin-right: 1.2rem;
+      margin-right: 1.5rem;
     }
   }
 }

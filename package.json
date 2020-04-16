@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "gumshoejs": "^5.1.2",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
