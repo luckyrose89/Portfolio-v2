@@ -1,0 +1,13 @@
+.btn {
+  background-color: $mainPink;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  &--cta {
+    padding: 0.9rem 2.2rem;
+  }
+}

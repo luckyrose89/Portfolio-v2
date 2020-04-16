@@ -22,6 +22,10 @@
     font-size: 1.5rem;
   }
 
+  &__job-title {
+    margin-top: 0.8rem;
+  }
+
   &__tag {
     display: inline-block;
     background-color: $mainPink;
