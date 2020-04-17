@@ -1,14 +1,23 @@
 .section {
   padding-bottom: 100px;
   width: 100%;
+  position: relative;
 
   &__padding {
-    padding-top: 6.5rem;
+    padding-top: 5rem;
   }
 
   &__heading {
     margin: 0;
     text-transform: uppercase;
+
+    &--grey {
+      color: $mainGrey;
+      margin-top: 1.5rem;
+      @mixin atMedium {
+        margin-top: 0;
+      }
+    }
   }
 
   h2 {
@@ -73,5 +82,6 @@
 
   &__body {
     padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }

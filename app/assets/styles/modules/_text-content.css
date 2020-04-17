@@ -1,6 +1,6 @@
 .text-content {
-  &__left {
-    text-align: left;
+  &__justify {
+    text-align: justify;
   }
 
   &__description {

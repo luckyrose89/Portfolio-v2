@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "gumshoejs": "^5.1.2",
     "normalize.css": "^8.0.1"
   },
