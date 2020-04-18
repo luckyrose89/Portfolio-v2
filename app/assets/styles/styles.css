@@ -13,6 +13,7 @@
 @import "./modules/_fixed-nav.css";
 @import "./modules/_section.css";
 @import "./modules/_container.css";
+@import "./modules/_row.css";
 @import "./modules/_column.css";
 @import "./modules/_text-content.css";
 @import "./modules/_btn.css";
