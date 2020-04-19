@@ -10,4 +10,8 @@
   &--cta {
     padding: 0.9rem 2.2rem;
   }
+
+  &--top-margin {
+    margin-top: 1.5rem;
+  }
 }
