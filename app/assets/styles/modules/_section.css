@@ -12,7 +12,7 @@
     text-transform: uppercase;
 
     &--grey {
-      color: $mainGrey;
+      color: #adadad;
       margin-top: 1.5rem;
       @mixin atMedium {
         margin-top: 0;

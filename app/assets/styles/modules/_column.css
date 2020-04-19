@@ -1,13 +1,9 @@
 .column {
-  width: 100%;
-
   &--content-center {
     text-align: center;
   }
 
   @mixin atMedium {
-    display: flex;
-
     &__small {
       width: 30%;
     }

@@ -1,4 +1,8 @@
 .text-content {
+  &--grey {
+    color: #666666;
+  }
+
   &__justify {
     text-align: justify;
   }

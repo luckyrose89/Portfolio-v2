@@ -1,0 +1,90 @@
+.accordion {
+  &__title {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 2rem;
+
+    h5 {
+      margin: 0;
+      padding: 1.5rem 0 1.5rem 1.2rem;
+      font-size: 1.2rem;
+      font-weight: 200;
+      transition: all 0.3s ease-out;
+    }
+    &--content {
+      padding-left: 0.8rem;
+    }
+
+    &--icon {
+      color: $mainPink;
+    }
+
+    &--date {
+      padding-left: 1rem;
+    }
+
+    &:hover {
+      h5 {
+        padding-left: 2.5rem;
+      }
+
+      border-color: #666666;
+    }
+  }
+
+  &__content {
+    font-size: 0.8rem;
+    h4 {
+      color: #666666;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+
+    &--inline-list {
+      margin: 0;
+      padding: 1.5rem 0 1.5rem 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-row-gap: 1.2rem;
+    }
+
+    &--inline-list-item {
+      list-style-type: circle;
+    }
+
+    &--project-title {
+      color: $mainPink;
+      padding: 1.5rem 0;
+      margin-bottom: 1.2rem;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 20px;
+        left: 0;
+        background: $mainPink;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transition: all 0.4s ease-out;
+        transform-origin: left;
+      }
+
+      &:hover {
+        color: $darkBlack;
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &--project-list {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+}
