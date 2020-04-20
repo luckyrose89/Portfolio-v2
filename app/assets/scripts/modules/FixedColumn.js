@@ -8,6 +8,19 @@ const images = {
   skills: "assets/images/game-keyboard.jpg"
 };
 
+const header = document.querySelector(".site-header");
+
+const spy = new Gumshoe(".fixed-nav__list a", {
+  navClass: "fixed-nav__highlight",
+  reflow: true,
+  offset: function() {
+    return header.getBoundingClientRect().height;
+  },
+  events: true
+});
+
+spy.detect();
+
 class FixedColumn {
   constructor() {
     this.navlist = document.querySelector(".fixed-nav__list");
@@ -18,11 +31,6 @@ class FixedColumn {
     this.events();
   }
   events() {
-    const spy = new Gumshoe(".fixed-nav__list a", {
-      navClass: "fixed-nav__highlight",
-      reflow: true
-    });
-
     document.addEventListener("gumshoeActivate", event =>
       this.updateFixedColumn(event)
     );

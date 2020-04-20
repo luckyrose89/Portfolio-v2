@@ -1,5 +1,4 @@
 .fixed-nav {
-  z-index: -1;
   opacity: 0;
   @mixin atLarge {
     position: relative;
@@ -10,7 +9,7 @@
     float: right;
     z-index: 7;
     opacity: 1;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
 
     &__list {
       margin: 0;
