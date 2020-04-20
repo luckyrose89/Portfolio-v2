@@ -1,8 +1,8 @@
 .accordion {
-  transition: all 0.3s ease-out;
   &__title {
     border-bottom: 1px solid #cccccc;
     margin-bottom: 2rem;
+    cursor: pointer;
 
     h5 {
       margin: 0;
@@ -21,6 +21,7 @@
 
     &--date {
       padding-left: 1rem;
+      color: $darkBlack;
     }
 
     &:hover {
@@ -34,6 +35,9 @@
 
   &__content {
     font-size: 0.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
     h4 {
       color: #666666;
       font-weight: 200;
@@ -75,5 +79,9 @@
         list-style-type: circle;
       }
     }
+  }
+
+  &__active {
+    max-height: 1000px;
   }
 }
