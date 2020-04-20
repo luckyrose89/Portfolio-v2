@@ -33,9 +33,9 @@
             >
               Home &#x2193;
               <div class="primary-nav__dropdown--menu">
-                <a href="#">About</a>
-                <a href="#">Resume</a>
-                <a href="#">Skills</a>
+                <a href="#about">About</a>
+                <a href="#resume">Resume</a>
+                <a href="#skills">Skills</a>
               </div>
             </li>
             <li class="primary-nav__list-item primary-nav__list-uppercase">
@@ -134,15 +134,21 @@
       <div class="fixed-nav">
         <nav>
           <ul class="fixed-nav__list">
-            <li class="fixed-nav__list-item"><a>About</a></li>
-            <li class="fixed-nav__list-item"><a>Resume</a></li>
-            <li class="fixed-nav__list-item"><a>Skills</a></li>
+            <li class="fixed-nav__list-item" data-link="about">
+              <a href="#about" class="fixed-nav__list-item--link">About</a>
+            </li>
+            <li class="fixed-nav__list-item" data-link="resume">
+              <a href="#resume" class="fixed-nav__list-item--link">Resume</a>
+            </li>
+            <li class="fixed-nav__list-item" data-link="skills">
+              <a href="#skills" class="fixed-nav__list-item--link">Skills</a>
+            </li>
           </ul>
         </nav>
       </div>
       <div class="inner-wrapper__content">
         <!----About Section Begins------>
-        <div class="section section__padding">
+        <div class="section section__padding" id="about">
           <div class="container">
             <div class="section__tag">
               <h3 class="section__heading">Who am i</h3>
@@ -185,8 +191,9 @@
           </div>
         </div>
         <!----About Section Ends------>
+
         <!----Resume Section Begins------>
-        <div class="section">
+        <div class="section" id="resume">
           <div class="container">
             <div class="section__tag">
               <h3 class="section__heading">My Bio</h3>
@@ -372,8 +379,9 @@
           </div>
         </div>
         <!----Resume Section Ends------>
+
         <!----Skills Section Begins------>
-        <div class="section">
+        <div class="section" id="skills">
           <div class="container">
             <div class="section__tag">
               <h3 class="section__heading">Attainments</h3>

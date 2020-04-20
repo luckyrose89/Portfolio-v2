@@ -5,6 +5,11 @@
   height: 0;
   width: 0;
   background-color: $darkBlack;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("assets/images/about.jpg");
   z-index: -1;
   opacity: 0;
   transition: all 0.3s ease-out;
@@ -12,6 +17,47 @@
     opacity: 1;
     z-index: 3;
     width: 40%;
+    height: 100vh;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 70px;
+    left: 0;
     height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      bottom: 160px;
+      width: 10px;
+      height: 400px;
+      background: rgba(#666666, 0.3);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      bottom: 150px;
+      width: 400px;
+      height: 10px;
+      background: rgba(#666666, 0.5);
+    }
+  }
+
+  &__text-content {
+    position: absolute;
+    color: #ffffff;
+    bottom: 150px;
+    left: 150px;
+    font-size: 4rem;
+    transform: translate(-30%, -70%);
+    text-transform: uppercase;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.3rem solid $mainPink;
   }
 }

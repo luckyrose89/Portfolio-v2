@@ -37,7 +37,9 @@
     font-size: 0.8rem;
     height: 10px;
     overflow: hidden;
-    transition: height 0.2s ease-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease-out;
     h4 {
       color: #666666;
       font-weight: 200;
@@ -83,5 +85,6 @@
 
   &__active {
     height: auto;
+    transform: scaleY(1);
   }
 }

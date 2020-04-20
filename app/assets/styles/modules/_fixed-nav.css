@@ -12,10 +12,6 @@
     opacity: 1;
     transition: all 0.3s ease-out;
 
-    nav {
-      color: #ffffff;
-    }
-
     &__list {
       margin: 0;
       padding: 0.8rem 0;
@@ -27,18 +23,25 @@
       list-style: none;
       background-color: $mainBlack;
       padding: 4px 8px;
-    }
+      transition: all 0.2s ease-in;
 
-    &__list-item a {
-      font-size: 0.9rem;
-      font-weight: 300;
-      line-height: 36px;
-      padding: 10px;
+      &--link {
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 36px;
+        padding: 10px;
+      }
     }
 
     &__fixed {
       position: fixed;
       z-index: 150;
     }
+  }
+
+  &__highlight {
+    color: $darkBlack;
+    background-color: $mainPink;
   }
 }
