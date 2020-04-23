@@ -3,4 +3,8 @@
   @mixin atMedium {
     display: flex;
   }
+
+  &__justify {
+    justify-content: space-between;
+  }
 }

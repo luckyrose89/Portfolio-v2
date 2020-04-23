@@ -3,12 +3,6 @@
   width: 100%;
   position: relative;
 
-  &--footer {
-    background-color: $darkBlack;
-    padding-top: 90px;
-    color: #ffffff;
-  }
-
   &__padding {
     padding-top: 5rem;
   }

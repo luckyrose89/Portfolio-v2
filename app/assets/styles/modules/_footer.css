@@ -81,4 +81,44 @@
     height: 100px;
     margin-top: 2rem;
   }
+
+  &__twitter-feed {
+    font-size: 0.8rem;
+    padding-bottom: 0.8rem;
+
+    &--item {
+      transition: all 0.3s ease-out;
+      a {
+        color: #ffffff;
+      }
+      p {
+        margin: 0;
+      }
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      &--active {
+        max-height: 150px;
+        opacity: 1;
+      }
+    }
+
+    &--control {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #ffffff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+
+      &--first {
+        padding-left: 0;
+      }
+
+      &:hover {
+        color: #444444;
+      }
+    }
+  }
 }

@@ -4,8 +4,12 @@
   }
 
   @mixin atMedium {
-    &__small {
+    &__smaller {
       width: 30%;
+    }
+
+    &__small {
+      width: 33.3%;
     }
 
     &__large {
