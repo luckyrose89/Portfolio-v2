@@ -1,25 +1,8 @@
-import "gumshoejs/src/js/gumshoe/_closest.polyfill";
-import "gumshoejs/src/js/gumshoe/_customEvent.polyfill";
-import Gumshoe from "gumshoejs/src/js/gumshoe/gumshoe";
-
 const images = {
   about: "assets/images/about.jpg",
   resume: "assets/images/resume.jpg",
   skills: "assets/images/game-keyboard.jpg"
 };
-
-const header = document.querySelector(".site-header");
-
-const spy = new Gumshoe(".fixed-nav__list a", {
-  navClass: "fixed-nav__highlight",
-  reflow: true,
-  offset: function() {
-    return header.getBoundingClientRect().height;
-  },
-  events: true
-});
-
-spy.detect();
 
 class FixedColumn {
   constructor() {
