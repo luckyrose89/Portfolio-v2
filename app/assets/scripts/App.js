@@ -20,13 +20,14 @@ new Accordion();
 new FixedColumn();
 
 const header = document.querySelector(".site-header");
+const scrollTopBtn = document.querySelector(".footer__copyright--scroll-top");
 const twitterFeed = document.querySelector(".footer__twitter-feed");
 const twitterUrl =
   "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.app%2Ffeeds%2FQcPOZnueFlV97i7f.xml&api_key=cewflxnhxawfvh5qgyh98ltpzrvhfnugmeifd57h";
 
 const formatDate = function(date) {
-  var d = new Date(date);
-  var months = [
+  let d = new Date(date);
+  let months = [
     "January",
     "February",
     "March",
@@ -41,9 +42,9 @@ const formatDate = function(date) {
     "December"
   ];
 
-  var month = months[d.getMonth()];
-  var day = "" + d.getDate();
-  var year = d.getFullYear();
+  let month = months[d.getMonth()];
+  let day = "" + d.getDate();
+  let year = d.getFullYear();
 
   if (day.length < 2) {
     day = "0" + day;
@@ -72,17 +73,17 @@ fetch(twitterUrl)
     }
     response.json().then(function(data) {
       for (var i = 0; i < 3; i++) {
-        var listItem = document.createElement("div");
-        var html =
+        let listItem = document.createElement("div");
+        let html =
           '<a href="' +
           data.items[i].link +
           '">' +
           "<p>" +
-          data.items[i].title +
-          "</p>" +
-          "<p>" +
           formatDate(data.items[i].pubDate) +
           "<p>" +
+          "<p>" +
+          data.items[i].title +
+          "</p>" +
           "</a>";
 
         listItem.innerHTML = html;
@@ -95,6 +96,11 @@ fetch(twitterUrl)
   .catch(function(err) {
     console.log("Fetch Error :-S", err);
   });
+
+scrollTopBtn.addEventListener("click", function() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
 
 if (module.hot) {
   module.hot.accept();
