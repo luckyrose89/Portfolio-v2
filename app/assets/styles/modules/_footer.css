@@ -91,12 +91,16 @@
       margin: 0;
       top: 40%;
       left: 10%;
+      max-width: 150px;
+      @mixin atSmall {
+        max-width: 100%;
+      }
     }
 
     &--scroll-top {
       position: absolute;
       bottom: 0;
-      right: 50px;
+      right: 40px;
       background: $mainPink;
       cursor: pointer;
       width: 50px;

@@ -25,6 +25,7 @@ const twitterFeed = document.querySelector(".footer__twitter-feed");
 const twitterUrl =
   "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.app%2Ffeeds%2FQcPOZnueFlV97i7f.xml&api_key=cewflxnhxawfvh5qgyh98ltpzrvhfnugmeifd57h";
 
+// Function to format dates for twitter feed
 const formatDate = function(date) {
   let d = new Date(date);
   let months = [
@@ -52,6 +53,8 @@ const formatDate = function(date) {
   return day + ", " + month + " " + year;
 };
 
+// Initialize an instance of gumshoe js to enable scroll spy
+
 const spy = new Gumshoe(".fixed-nav__list a", {
   navClass: "fixed-nav__highlight",
   reflow: true,
@@ -62,6 +65,8 @@ const spy = new Gumshoe(".fixed-nav__list a", {
 });
 
 spy.detect();
+
+// fetch twitter feed data
 
 fetch(twitterUrl)
   .then(function(response) {
@@ -97,6 +102,7 @@ fetch(twitterUrl)
     console.log("Fetch Error :-S", err);
   });
 
+// add event listener to scroll top button in footer
 scrollTopBtn.addEventListener("click", function() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;

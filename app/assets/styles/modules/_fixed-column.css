@@ -4,20 +4,29 @@
   left: 0;
   height: 0;
   width: 0;
-  background-color: $darkBlack;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("assets/images/about.jpg");
   z-index: -1;
   opacity: 0;
-  transition: all 0.3s ease-out;
+
   @mixin atLarge {
     opacity: 1;
     z-index: 3;
     width: 40%;
     height: 100vh;
+  }
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $darkBlack;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("assets/images/about.jpg");
+    transition: all 0.3s ease-out;
   }
 
   &__overlay {
