@@ -25,7 +25,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("assets/images/about.jpg");
     transition: all 0.3s ease-out;
   }
 
