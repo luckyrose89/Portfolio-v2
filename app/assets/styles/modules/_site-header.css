@@ -33,6 +33,7 @@
     line-height: 40px;
     top: 22px;
     right: 16px;
+    cursor: pointer;
 
     &--barOne,
     &--barTwo,

@@ -14,10 +14,13 @@ import FixedColumn from "./modules/FixedColumn";
 import TwitterFeed from "./modules/TwitterFeed";
 
 new MobileMenu();
-new SlideShow();
-new FixedNav();
-new Accordion();
-new FixedColumn();
+
+if (window.location.pathname === "/index.html") {
+  new SlideShow();
+  new FixedNav();
+  new Accordion();
+  new FixedColumn();
+}
 
 const header = document.querySelector(".site-header");
 const scrollTopBtn = document.querySelector(".footer__copyright--scroll-top");

@@ -1,7 +1,9 @@
 class FixedColumn {
   constructor() {
     this.navlist = document.querySelector(".fixed-nav__list");
-    this.fixedColumn = document.querySelector(".fixed-column__image-container");
+    this.fixedColumn = document.querySelector(
+      ".fixed-column__image-container--home"
+    );
     this.fixedColumnText = document.querySelector(
       ".fixed-column__text-content"
     );
