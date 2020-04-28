@@ -26,6 +26,12 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: all 0.3s ease-out;
+
+    &--contact {
+      @mixin atLarge {
+        background-image: url("assets/images/contact.jpg");
+      }
+    }
   }
 
   &__overlay {
@@ -43,7 +49,7 @@
       bottom: 160px;
       width: 10px;
       height: 400px;
-      background: rgba(#666666, 0.4);
+      background: rgba(#666666, 0.5);
     }
 
     &::after {
@@ -53,7 +59,7 @@
       bottom: 150px;
       width: 400px;
       height: 10px;
-      background: rgba(#666666, 0.4);
+      background: rgba(#666666, 0.5);
     }
   }
 

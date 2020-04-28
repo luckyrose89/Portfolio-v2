@@ -14,4 +14,8 @@
   &__highlight {
     color: $mainPink;
   }
+
+  &__smaller-text {
+    font-size: 0.8rem;
+  }
 }

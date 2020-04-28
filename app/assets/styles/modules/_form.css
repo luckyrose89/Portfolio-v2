@@ -1,0 +1,33 @@
+.form {
+  max-width: 600px;
+
+  &__padding-top {
+    padding-top: 1.5rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #cccccc;
+    outline: none;
+    color: $darkBlack;
+    font-size: 0.7rem;
+
+    &::placeholder {
+      color: $darkBlack;
+    }
+  }
+
+  input {
+    padding: 1rem;
+  }
+
+  &__contact-textarea {
+    height: 150px;
+    resize: none;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+}

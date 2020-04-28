@@ -25,9 +25,7 @@ class FixedColumn {
 
   updateOnresize() {
     let activeLink = document.querySelector(".fixed-nav__highlight");
-    if (this.mediaQuery.matches) {
-      this.setBanner(activeLink.getAttribute("data-link"));
-    }
+    this.setBanner(activeLink.getAttribute("data-link"));
   }
 
   updateFixedColumn(event) {
