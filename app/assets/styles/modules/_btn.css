@@ -6,6 +6,11 @@
   font-size: 0.7rem;
   color: #ffffff;
   text-transform: uppercase;
+  position: relative;
+
+  &--text {
+    transition: all 0.3s ease-out;
+  }
 
   &--cta {
     padding: 0.9rem 2.2rem;
@@ -13,5 +18,28 @@
 
   &--top-margin {
     margin-top: 1.5rem;
+  }
+
+  &--right {
+    position: absolute;
+    height: 41px;
+    width: 40px;
+    background: #1a1a1a;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-left: -50px;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  &:hover &--right {
+    margin-left: 0;
+    opacity: 1;
+  }
+
+  &:hover &--text {
+    margin-left: 15px;
   }
 }

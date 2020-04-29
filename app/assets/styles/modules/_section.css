@@ -3,6 +3,10 @@
   width: 100%;
   position: relative;
 
+  &--portfolio {
+    background-color: #292929;
+  }
+
   &__padding {
     padding-top: 5rem;
   }

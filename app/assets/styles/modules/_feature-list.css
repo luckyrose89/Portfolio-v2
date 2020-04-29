@@ -35,7 +35,7 @@
     transform: scaleX(0);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    transition: all 0.4s ease-in;
+    transition: all 0.4s linear;
     z-index: 2;
 
     &--competent {
