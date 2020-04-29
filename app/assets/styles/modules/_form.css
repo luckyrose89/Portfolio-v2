@@ -15,9 +15,14 @@
     outline: none;
     color: $darkBlack;
     font-size: 0.7rem;
+    transition: all 0.3s ease-out;
 
     &::placeholder {
       color: $darkBlack;
+    }
+
+    &:focus {
+      border-color: $mainPink;
     }
   }
 

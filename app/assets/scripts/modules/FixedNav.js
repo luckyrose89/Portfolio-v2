@@ -6,6 +6,7 @@ class FixedNav {
   }
 
   events() {
+    if (!this.fixedNavbar) return;
     document.addEventListener("scroll", () => this.locateAndFixNav());
   }
 

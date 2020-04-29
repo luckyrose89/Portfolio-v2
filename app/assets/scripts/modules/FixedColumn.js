@@ -16,6 +16,7 @@ class FixedColumn {
     this.events();
   }
   events() {
+    if (!this.fixedColumn) return;
     this.setBanner("about");
     document.addEventListener("gumshoeActivate", event =>
       this.updateFixedColumn(event)
@@ -25,7 +26,9 @@ class FixedColumn {
 
   updateOnresize() {
     let activeLink = document.querySelector(".fixed-nav__highlight");
-    this.setBanner(activeLink.getAttribute("data-link"));
+    if (this.mediaQuery.matches) {
+      this.setBanner(activeLink.getAttribute("data-link"));
+    }
   }
 
   updateFixedColumn(event) {

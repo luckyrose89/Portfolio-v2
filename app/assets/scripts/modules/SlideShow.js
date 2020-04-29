@@ -13,6 +13,7 @@ class SlideShow {
   }
 
   events() {
+    if (!this.slideNext || !this.slideprevious) return;
     this.hideAllSlides();
     this.slideNext.addEventListener("click", () => this.showNextSlide());
     this.slideprevious.addEventListener("click", () => this.showPrevSlide());
