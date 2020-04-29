@@ -32,6 +32,12 @@
         background-image: url("assets/images/contact.jpg");
       }
     }
+
+    &--portfolio {
+      @mixin atLarge {
+        background-image: url("assets/images/portfolio.jpg");
+      }
+    }
   }
 
   &__overlay {

@@ -39,7 +39,7 @@
               </div>
             </li>
             <li class="primary-nav__list-item primary-nav__list-uppercase">
-              <a href="#">Portfolio</a>
+              <a href="portfolio.html">Portfolio</a>
             </li>
             <li class="primary-nav__list-item primary-nav__list-uppercase">
               <a href="#">Blog</a>
@@ -82,16 +82,25 @@
                 mail the address provided below. Alternatively, you can check
                 out my github, linkedIn and twitter profiles for more info.
               </p>
-              <form class="form form__padding-top">
+              <form
+                action="https://formspree.io/mqkyzybg"
+                method="POST"
+                class="form form__padding-top"
+              >
                 <input type="text" placeholder="Name" name="name" required />
-                <input type="text" placeholder="email" name="email" required />
+                <input
+                  type="text"
+                  placeholder="email"
+                  name="_replyto"
+                  required
+                />
                 <textarea
                   class="form__contact-textarea"
                   name="message"
                   placeholder="Message"
                 ></textarea>
 
-                <button class="btn btn--cta btn--top-margin">
+                <button type="submit" class="btn btn--cta btn--top-margin">
                   Send Message
                 </button>
               </form>

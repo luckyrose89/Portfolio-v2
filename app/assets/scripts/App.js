@@ -25,6 +25,21 @@ const twitterFeed = document.querySelector(".footer__twitter-feed");
 const twitterUrl =
   "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.app%2Ffeeds%2FQcPOZnueFlV97i7f.xml&api_key=cewflxnhxawfvh5qgyh98ltpzrvhfnugmeifd57h";
 
+// Initialize an instance of gumshoe js to enable scroll spy
+// if user is on home page
+if (document.querySelector(".fixed-column__image-container--home")) {
+  const spy = new Gumshoe(".fixed-nav__list a", {
+    navClass: "fixed-nav__highlight",
+    reflow: true,
+    offset: function() {
+      return header.getBoundingClientRect().height;
+    },
+    events: true
+  });
+
+  spy.detect();
+}
+
 // Function to format dates for twitter feed
 const formatDate = function(date) {
   let d = new Date(date);
@@ -52,19 +67,6 @@ const formatDate = function(date) {
   }
   return day + ", " + month + " " + year;
 };
-
-// Initialize an instance of gumshoe js to enable scroll spy
-
-const spy = new Gumshoe(".fixed-nav__list a", {
-  navClass: "fixed-nav__highlight",
-  reflow: true,
-  offset: function() {
-    return header.getBoundingClientRect().height;
-  },
-  events: true
-});
-
-spy.detect();
 
 // fetch twitter feed data
 
