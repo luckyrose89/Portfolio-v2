@@ -1,0 +1,16 @@
+.gallery {
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  position: relative;
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+  @mixin atLarge {
+    padding-top: 4.5rem;
+  }
+
+  &__item {
+    background-color: $mainPink;
+    height: 150px;
+  }
+}

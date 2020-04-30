@@ -1,5 +1,10 @@
 .fixed-nav {
-  opacity: 0;
+  display: none;
+
+  &__small {
+    display: none;
+  }
+
   &__list {
     margin: 0;
     padding: 0.8rem 0;
@@ -22,6 +27,22 @@
     }
   }
 
+  @mixin atMaxMedium {
+    &__small {
+      display: block;
+      padding-top: 4.5rem;
+      position: relative;
+
+      &--list {
+        flex-wrap: wrap;
+      }
+
+      &--item {
+        background-color: #292929;
+      }
+    }
+  }
+
   @mixin atLarge {
     position: relative;
     top: 0px;
@@ -30,16 +51,12 @@
     height: 70px;
     float: right;
     z-index: 7;
-    opacity: 1;
+    display: block;
     transition: all 0.2s ease-out;
 
     &__fixed {
       position: fixed;
       z-index: 150;
-    }
-
-    &--small {
-      display: none;
     }
   }
 
