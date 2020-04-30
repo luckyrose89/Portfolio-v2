@@ -79,5 +79,10 @@
     text-transform: uppercase;
     padding-bottom: 0.3rem;
     border-bottom: 0.3rem solid $mainPink;
+    &--portfolio {
+      margin-left: 0.4rem;
+      font-size: 3.8rem;
+      transform: translate(-30%, -40%);
+    }
   }
 }
