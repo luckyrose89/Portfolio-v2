@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "filterizr": "^2.2.4",
     "gumshoejs": "^5.1.2",
+    "hammerjs": "^2.0.8",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

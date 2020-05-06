@@ -1,5 +1,6 @@
 class SlideShow {
   constructor() {
+    this.slideContainer = document.querySelector(".large-hero__slider");
     this.slides = Array.prototype.slice.call(
       document.querySelectorAll(".large-hero__slide")
     );
@@ -14,11 +15,27 @@ class SlideShow {
 
   events() {
     if (!this.slideNext || !this.slideprevious) return;
+    let hammerTime = new Hammer.Manager(this.slideContainer, {
+      touchAction: "auto",
+      inputClass: Hammer.SUPPORT_POINTER_EVENTS
+        ? Hammer.PointerEventInput
+        : Hammer.TouchInput,
+      recognizers: [
+        [
+          Hammer.Swipe,
+          {
+            direction: Hammer.DIRECTION_HORIZONTAL
+          }
+        ]
+      ]
+    });
     this.hideAllSlides();
     this.slideNext.addEventListener("click", () => this.showNextSlide());
     this.slideprevious.addEventListener("click", () => this.showPrevSlide());
     this.showSlide(this.slideIndex);
     this.highlightProgressBar(this.slideIndex);
+    hammerTime.on("swipeleft", () => this.showNextSlide());
+    hammerTime.on("swiperight", () => this.showPrevSlide());
   }
 
   hideAllSlides() {

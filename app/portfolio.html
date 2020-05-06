@@ -70,18 +70,18 @@
     <div class="inner-wrapper">
       <div class="fixed-nav fixed-nav__portfolio">
         <nav>
-          <ul class="fixed-nav__list">
-            <li class="fixed-nav__list-item">
-              <a class="fixed-nav__list-item--link">All</a>
+          <ul class="fixed-nav__list fixed-nav__portfolio">
+            <li class="fixed-nav__list-item" data-filter="all">
+              <span class="fixed-nav__list-item--link">All</span>
             </li>
-            <li class="fixed-nav__list-item">
-              <a class="fixed-nav__list-item--link">Frontend</a>
+            <li class="fixed-nav__list-item" data-filter="frontend">
+              <span class="fixed-nav__list-item--link">Frontend</span>
             </li>
-            <li class="fixed-nav__list-item">
-              <a class="fixed-nav__list-item--link">Backend</a>
+            <li class="fixed-nav__list-item" data-filter="backend">
+              <span class="fixed-nav__list-item--link">Backend</span>
             </li>
-            <li class="fixed-nav__list-item">
-              <a class="fixed-nav__list-item--link">Fullstack</a>
+            <li class="fixed-nav__list-item" data-filter="fullstack">
+              <span class="fixed-nav__list-item--link">Fullstack</span>
             </li>
           </ul>
         </nav>
@@ -92,23 +92,35 @@
           <div class="fixed-nav__small">
             <nav>
               <ul class="fixed-nav__list fixed-nav__small--list">
-                <li class="fixed-nav__list-item fixed-nav__small--item">
+                <li
+                  class="fixed-nav__list-item fixed-nav__small--item fixed-nav__highlight"
+                  data-filter="all"
+                >
                   <a class="fixed-nav__list-item--link">All</a>
                 </li>
-                <li class="fixed-nav__list-item fixed-nav__small--item">
+                <li
+                  class="fixed-nav__list-item fixed-nav__small--item"
+                  data-filter="frontend"
+                >
                   <a class="fixed-nav__list-item--link">Frontend</a>
                 </li>
-                <li class="fixed-nav__list-item fixed-nav__small--item">
+                <li
+                  class="fixed-nav__list-item fixed-nav__small--item"
+                  data-filter="backend"
+                >
                   <a class="fixed-nav__list-item--link">Backend</a>
                 </li>
-                <li class="fixed-nav__list-item fixed-nav__small--item">
+                <li
+                  class="fixed-nav__list-item fixed-nav__small--item"
+                  data-filter="fullstack"
+                >
                   <a class="fixed-nav__list-item--link">Fullstack</a>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="gallery">
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="frontend">
               <img
                 class="gallery__item--image"
                 src="assets/images/travel-site.png"
@@ -149,7 +161,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="frontend">
               <img
                 class="gallery__item--image"
                 src="assets/images/calculator.png"
@@ -184,7 +196,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="fullstack">
               <img
                 class="gallery__item--image"
                 src="assets/images/journal-app.png"
@@ -227,7 +239,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item gallery__item__col2">
+            <div class="gallery__item" data-category="fullstack">
               <img
                 class="gallery__item--image"
                 src="assets/images/jobsOnTheGo.png"
@@ -268,7 +280,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="frontend">
               <img
                 class="gallery__item--image"
                 src="assets/images/memory-game.png"
@@ -303,7 +315,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="frontend">
               <img
                 class="gallery__item--image"
                 src="assets/images/pomodoro.png"
@@ -338,7 +350,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="backend">
               <img
                 class="gallery__item--image"
                 src="assets/images/exercise-tracker.png"
@@ -376,7 +388,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="backend">
               <img
                 class="gallery__item--image"
                 src="assets/images/file-metadata-app.png"
@@ -414,7 +426,7 @@
                 </div>
               </div>
             </div>
-            <div class="gallery__item">
+            <div class="gallery__item" data-category="frontend">
               <img
                 class="gallery__item--image"
                 src="assets/images/whack-a-mole.png"
