@@ -7,6 +7,7 @@ import "gumshoejs/src/js/gumshoe/_closest.polyfill";
 import "gumshoejs/src/js/gumshoe/_customEvent.polyfill";
 import "hammerjs";
 import Gumshoe from "gumshoejs/src/js/gumshoe/gumshoe";
+import Loading from "./modules/Loading";
 import MobileMenu from "./modules/MobileMenu";
 import SlideShow from "./modules/SlideShow";
 import FixedNav from "./modules/FixedNav";
@@ -14,6 +15,7 @@ import Accordion from "./modules/Accordion";
 import FixedColumn from "./modules/FixedColumn";
 import TwitterFeed from "./modules/TwitterFeed";
 
+new Loading();
 new MobileMenu();
 new SlideShow();
 new FixedNav();
@@ -21,7 +23,6 @@ new Accordion();
 new FixedColumn();
 
 const header = document.querySelector(".site-header");
-const slideContainer = document.querySelector(".large-hero");
 const scrollTopBtn = document.querySelector(".footer__copyright--scroll-top");
 const twitterFeed = document.querySelector(".footer__twitter-feed");
 const twitterUrl =
@@ -36,13 +37,12 @@ if (document.querySelector(".fixed-column__image-container--home")) {
     offset: function() {
       return header.getBoundingClientRect().height;
     },
-    events: true
+    events: true,
+    reflow: true
   });
 
   spy.detect();
 }
-
-// Create an instance of hammerjs
 
 // Function to format dates for twitter feed
 const formatDate = function(date) {
