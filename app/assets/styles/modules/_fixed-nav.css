@@ -1,13 +1,6 @@
 .fixed-nav {
   opacity: 0;
 
-  &__small {
-    opacity: 0;
-    height: 0;
-    z-index: -1;
-    transition: all 0.2s ease-in;
-  }
-
   &__list {
     margin: 0;
     padding: 0.8rem 0;
@@ -28,25 +21,6 @@
       font-weight: 300;
       line-height: 36px;
       padding: 10px;
-    }
-  }
-
-  @mixin atMaxMedium {
-    &__small {
-      opacity: 1;
-      height: 100%;
-      z-index: 1;
-      padding-top: 4.5rem;
-      position: relative;
-
-      &--list {
-        flex-wrap: wrap;
-        margin-left: 0.5rem;
-      }
-
-      &--item {
-        background-color: #292929;
-      }
     }
   }
 

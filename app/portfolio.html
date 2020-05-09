@@ -15,510 +15,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <!--Main header begins-->
-    <header class="site-header">
-      <div class="site-header__logo">
-        <a href="index.html" class="site-header__logo--text">Codernewbee</a>
-      </div>
-      <div class="site-header__menu-icon">
-        <span class="site-header__menu-icon--barOne"></span>
-        <span class="site-header__menu-icon--barTwo"></span>
-        <span class="site-header__menu-icon--barThree"></span>
-      </div>
-      <div class="site-header__menu-content">
-        <nav class="primary-nav primary-nav--header">
-          <ul>
-            <li
-              class="primary-nav__list-item primary-nav__list-uppercase primary-nav__dropdown"
-            >
-              <a href="index.html">Home &#x2193;</a>
-              <div class="primary-nav__dropdown--menu">
-                <a href="index.html">About</a>
-                <a href="index.html">Resume</a>
-                <a href="index.html">Skills</a>
-              </div>
-            </li>
-            <li class="primary-nav__list-item primary-nav__list-uppercase">
-              <a href="#">Portfolio</a>
-            </li>
-            <li class="primary-nav__list-item primary-nav__list-uppercase">
-              <a href="#">Blog</a>
-            </li>
-            <li class="primary-nav__list-item primary-nav__list-uppercase">
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-----Side Column Fixed-------->
-    <div class="fixed-column">
-      <div
-        class="fixed-column__image-container fixed-column__image-container--portfolio"
-      ></div>
-      <div class="fixed-column__overlay">
+    <div class="loading">
+      <div class="loading__loader"></div>
+    </div>
+    <div class="content" style="visibility: hidden;">
+      <!--Main header begins-->
+      <header class="site-header">
+        <div class="site-header__logo">
+          <a href="index.html" class="site-header__logo--text">Codernewbee</a>
+        </div>
+        <div class="site-header__menu-icon">
+          <span class="site-header__menu-icon--barOne"></span>
+          <span class="site-header__menu-icon--barTwo"></span>
+          <span class="site-header__menu-icon--barThree"></span>
+        </div>
+        <div class="site-header__menu-content">
+          <nav class="primary-nav primary-nav--header">
+            <ul>
+              <li
+                class="primary-nav__list-item primary-nav__list-uppercase primary-nav__dropdown"
+              >
+                <a href="index.html">Home &#x2193;</a>
+                <div class="primary-nav__dropdown--menu">
+                  <a href="index.html">About</a>
+                  <a href="index.html">Resume</a>
+                  <a href="index.html">Skills</a>
+                </div>
+              </li>
+              <li class="primary-nav__list-item primary-nav__list-uppercase">
+                <a href="#">Portfolio</a>
+              </li>
+              <li class="primary-nav__list-item primary-nav__list-uppercase">
+                <a href="#">Blog</a>
+              </li>
+              <li class="primary-nav__list-item primary-nav__list-uppercase">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-----Side Column Fixed-------->
+      <div class="fixed-column">
         <div
-          class="fixed-column__text-content fixed-column__text-content--portfolio"
-        >
-          Portfolio
-        </div>
-      </div>
-    </div>
-    <!-----Side Column Fixed Ends-------->
-
-    <!---Inner wrapper Begins-->
-    <div class="inner-wrapper">
-      <div class="fixed-nav fixed-nav__portfolio">
-        <nav>
-          <ul class="fixed-nav__list fixed-nav__portfolio">
-            <li class="fixed-nav__list-item" data-filter="all">
-              <span class="fixed-nav__list-item--link">All</span>
-            </li>
-            <li class="fixed-nav__list-item" data-filter="frontend">
-              <span class="fixed-nav__list-item--link">Frontend</span>
-            </li>
-            <li class="fixed-nav__list-item" data-filter="backend">
-              <span class="fixed-nav__list-item--link">Backend</span>
-            </li>
-            <li class="fixed-nav__list-item" data-filter="fullstack">
-              <span class="fixed-nav__list-item--link">Fullstack</span>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="inner-wrapper__content">
-        <!----Portfolio Section Begins------>
-        <div class="section section--portfolio">
-          <div class="fixed-nav__small">
-            <nav>
-              <ul class="fixed-nav__list fixed-nav__small--list">
-                <li
-                  class="fixed-nav__list-item fixed-nav__small--item"
-                  data-filter="all"
-                >
-                  <a class="fixed-nav__list-item--link">All</a>
-                </li>
-                <li
-                  class="fixed-nav__list-item fixed-nav__small--item"
-                  data-filter="frontend"
-                >
-                  <a class="fixed-nav__list-item--link">Frontend</a>
-                </li>
-                <li
-                  class="fixed-nav__list-item fixed-nav__small--item"
-                  data-filter="backend"
-                >
-                  <a class="fixed-nav__list-item--link">Backend</a>
-                </li>
-                <li
-                  class="fixed-nav__list-item fixed-nav__small--item"
-                  data-filter="fullstack"
-                >
-                  <a class="fixed-nav__list-item--link">Fullstack</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="gallery">
-            <div class="gallery__item" data-category="frontend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/travel-site.png"
-                alt="travel website image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Travel Website
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        JS
-                      </li>
-                      <li>
-                        Webpack
-                      </li>
-                      <li>
-                        PostCSS
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="frontend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/calculator.png"
-                alt="calculator image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Calculator
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        JS
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="fullstack">
-              <img
-                class="gallery__item--image"
-                src="assets/images/journal-app.png"
-                alt="Journal application image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Journal App
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        React
-                      </li>
-                      <li>
-                        Node JS
-                      </li>
-                      <li>
-                        Express
-                      </li>
-                      <li>JWT</li>
-                      <li>Material UI</li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="fullstack">
-              <img
-                class="gallery__item--image"
-                src="assets/images/jobsOnTheGo.png"
-                alt="Jobs on the go website image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Jobs On the Go
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        React
-                      </li>
-                      <li>
-                        Node JS
-                      </li>
-                      <li>
-                        Express
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="frontend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/memory-game.png"
-                alt="Memory game image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Memory game
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        JS
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="frontend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/pomodoro.png"
-                alt="Pomodoro application image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Pomodoro App
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        JS
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="backend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/exercise-tracker.png"
-                alt="Exercise tracker API image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Exercise Tracker API
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        Node JS
-                      </li>
-                      <li>
-                        Express
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="backend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/file-metadata-app.png"
-                alt="file metadata service API image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      File Metadata API
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        Node JS
-                      </li>
-                      <li>
-                        Express
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__item" data-category="frontend">
-              <img
-                class="gallery__item--image"
-                src="assets/images/whack-a-mole.png"
-                alt="Whack a mole game image"
-              />
-              <div class="gallery__item--overlay">
-                <div class="gallery__item--text-content">
-                  <div class="gallery__item--text-content__info">
-                    <h5 class="gallery__item--text-content__title">
-                      Whack-A-Mole
-                    </h5>
-                    <ul class="gallery__item--text-content__list">
-                      <li>
-                        html
-                      </li>
-                      <li>
-                        CSS
-                      </li>
-                      <li>
-                        JS
-                      </li>
-                    </ul>
-                  </div>
-                  <ul class="gallery__item--text-content__icons">
-                    <li>
-                      <a><i class="fab fa-github-alt"></i></a>
-                    </li>
-                    <li>
-                      <a><i class="fas fa-link"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          class="fixed-column__image-container fixed-column__image-container--portfolio"
+        ></div>
+        <div class="fixed-column__overlay">
+          <div
+            class="fixed-column__text-content fixed-column__text-content--portfolio"
+          >
+            Portfolio
           </div>
         </div>
-        <!----Portfolio Section Ends------>
-        <!--------Footer Begins-------->
-        <footer class="section footer">
-          <div class="container">
-            <div class="row row__justify">
-              <div class="column column__small">
-                <h4>Find Me</h4>
-                <ul class="footer__social footer__lists row">
-                  <li>
-                    <a><i class="fab fa-linkedin-in"></i></a>
-                  </li>
-                  <li>
-                    <a><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a><i class="fab fa-github-alt"></i></a>
-                  </li>
-                </ul>
-              </div>
+      </div>
+      <!-----Side Column Fixed Ends-------->
 
-              <div class="column column__small">
-                <h4>Contact Info</h4>
-                <ul class="footer__lists footer__contact">
-                  <li>
-                    <i class="far fa-envelope"></i
-                    ><span>avidrutham@gmail.com</span>
-                  </li>
-                  <li><i class="fas fa-pen"></i><span>Contact Form</span></li>
-                </ul>
+      <!---Inner wrapper Begins-->
+      <div class="inner-wrapper">
+        <div class="inner-wrapper__content">
+          <!----Portfolio Section Begins------>
+          <div class="section section__padding">
+            <div class="container__small">
+              <div class="section__tag">
+                <h3 class="section__heading">My Work</h3>
               </div>
-
-              <div class="column column__small">
-                <h4>My twitter</h4>
-                <div class="footer__twitter-feed"></div>
-                <button
-                  class="footer__twitter-feed--control footer__twitter-feed--control--first ctrl-left "
-                >
-                  <i class="fas fa-long-arrow-alt-left"></i>
-                </button>
-                <button class="footer__twitter-feed--control ctrl-right">
-                  <i class="fas fa-long-arrow-alt-right"></i>
-                </button>
+              <div class="section__title">
+                <h2 class="section__heading">Portfolio</h2>
+              </div>
+              <div class="section--title-seperator"></div>
+              <div class="section__body">
+                <ul class="gallery__menu">
+                  <li>All</li>
+                  <li>Frontend</li>
+                  <li>Backend</li>
+                  <li>Fullstack</li>
+                </ul>
+                <div class="gallery">
+                  <div class="gallery__card">
+                    <div class="gallery__card--image"></div>
+                    <div class="gallery__card--description">
+                      <h5>Project Title</h5>
+                      <p>tech, tech, tech</p>
+                    </div>
+                  </div>
+                  <div class="gallery__card">
+                    <div class="gallery__card--image"></div>
+                    <div class="gallery__card--description">
+                      <h5>Project Title</h5>
+                      <p>tech, tech, tech</p>
+                    </div>
+                  </div>
+                  <div class="gallery__card">
+                    <div class="gallery__card--image"></div>
+                    <div class="gallery__card--description">
+                      <h5>Project Title</h5>
+                      <p>tech, tech, tech</p>
+                    </div>
+                  </div>
+                  <div class="gallery__card">
+                    <div class="gallery__card--image"></div>
+                    <div class="gallery__card--description">
+                      <h5>Project Title</h5>
+                      <p>tech, tech, tech</p>
+                    </div>
+                  </div>
+                  <div class="gallery__card">
+                    <div class="gallery__card--image"></div>
+                    <div class="gallery__card--description">
+                      <h5>Project Title</h5>
+                      <p>tech, tech, tech</p>
+                    </div>
+                  </div>
+                  <div class="gallery__card column__medium">
+                    <div class="gallery__card--image"></div>
+                    <div class="gallery__card--description">
+                      <h5>Project Title</h5>
+                      <p>tech, tech, tech</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="footer__copyright">
+          <!----Portfolio Section Ends------>
+          <!--------Footer Begins-------->
+          <footer class="section footer">
             <div class="container">
-              <p>&copy; Divya Mathur 2020. All Rights Reserved</p>
+              <div class="row row__justify">
+                <div class="column column__small">
+                  <h4>Find Me</h4>
+                  <ul class="footer__social footer__lists row">
+                    <li>
+                      <a><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a><i class="fab fa-github-alt"></i></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="column column__small">
+                  <h4>Contact Info</h4>
+                  <ul class="footer__lists footer__contact">
+                    <li>
+                      <i class="far fa-envelope"></i
+                      ><span>avidrutham@gmail.com</span>
+                    </li>
+                    <li><i class="fas fa-pen"></i><span>Contact Form</span></li>
+                  </ul>
+                </div>
+
+                <div class="column column__small">
+                  <h4>My twitter</h4>
+                  <div class="footer__twitter-feed"></div>
+                  <button
+                    class="footer__twitter-feed--control footer__twitter-feed--control--first ctrl-left "
+                  >
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                  </button>
+                  <button class="footer__twitter-feed--control ctrl-right">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="footer__copyright--scroll-top">
-              <i class="fas fa-angle-double-up footer__copyright--icon"></i>
+            <div class="footer__copyright">
+              <div class="container">
+                <p>&copy; Divya Mathur 2020. All Rights Reserved</p>
+              </div>
+              <div class="footer__copyright--scroll-top">
+                <i class="fas fa-angle-double-up footer__copyright--icon"></i>
+              </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
+      <!----Portfolio Section Ends------>
     </div>
-    <!----Portfolio Section Ends------>
   </body>
 </html>
