@@ -15,6 +15,7 @@ class SlideShow {
 
   events() {
     if (!this.slideNext || !this.slideprevious) return;
+    // Create an instance of Hammer js
     let hammerTime = new Hammer.Manager(this.slideContainer, {
       touchAction: "auto",
       inputClass: Hammer.SUPPORT_POINTER_EVENTS

@@ -85,13 +85,19 @@
               <div class="section--title-seperator"></div>
               <div class="section__body">
                 <ul class="gallery__menu">
-                  <li>All</li>
-                  <li>Frontend</li>
-                  <li>Backend</li>
-                  <li>Fullstack</li>
+                  <li class="gallery__menu--item" data-filter="all">All</li>
+                  <li class="gallery__menu--item" data-filter="frontend">
+                    Frontend
+                  </li>
+                  <li class="gallery__menu--item" data-filter="backend">
+                    Backend
+                  </li>
+                  <li class="gallery__menu--item" data-filter="fullstack">
+                    Fullstack
+                  </li>
                 </ul>
                 <div class="gallery">
-                  <div class="gallery__card">
+                  <div class="gallery__card" data-group="frontend">
                     <div
                       class="gallery__card--image gallery__card--image__image1"
                     ></div>
@@ -126,7 +132,7 @@
                       </button>
                     </div>
                   </div>
-                  <div class="gallery__card">
+                  <div class="gallery__card" data-group="fullstack">
                     <div
                       class="gallery__card--image gallery__card--image__image2"
                     ></div>
@@ -160,7 +166,7 @@
                       </button>
                     </div>
                   </div>
-                  <div class="gallery__card">
+                  <div class="gallery__card" data-group="backend">
                     <div
                       class="gallery__card--image  gallery__card--image__image3"
                     ></div>
@@ -194,7 +200,7 @@
                       </button>
                     </div>
                   </div>
-                  <div class="gallery__card">
+                  <div class="gallery__card" data-group="backend">
                     <div
                       class="gallery__card--image  gallery__card--image__image4"
                     ></div>
@@ -228,7 +234,7 @@
                       </button>
                     </div>
                   </div>
-                  <div class="gallery__card">
+                  <div class="gallery__card" data-group="fullstack">
                     <div
                       class="gallery__card--image  gallery__card--image__image5"
                     ></div>
@@ -262,7 +268,7 @@
                       </button>
                     </div>
                   </div>
-                  <div class="gallery__card">
+                  <div class="gallery__card" data-group="frontend">
                     <div
                       class="gallery__card--image  gallery__card--image__image6"
                     ></div>
@@ -325,7 +331,10 @@
                       <i class="far fa-envelope"></i
                       ><span>avidrutham@gmail.com</span>
                     </li>
-                    <li><i class="fas fa-pen"></i><a href="contact.html"><span>Contact Form</span></a></li>
+                    <li>
+                      <i class="fas fa-pen"></i
+                      ><a href="contact.html"><span>Contact Form</span></a>
+                    </li>
                   </ul>
                 </div>
 

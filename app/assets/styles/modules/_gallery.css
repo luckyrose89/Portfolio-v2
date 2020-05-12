@@ -1,7 +1,6 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   &__menu {
     padding: 0;
@@ -10,7 +9,8 @@
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
     margin-left: 0.2rem;
-    li {
+    cursor: pointer;
+    &--item {
       list-style: none;
       font-size: 1.2rem;
       color: #666666;
@@ -18,15 +18,27 @@
       font-weight: 300;
       text-transform: uppercase;
       transition: width 0.3s ease-out;
+      padding-bottom: 0.5rem;
+    }
+
+    &--active {
+      color: $mainPink;
+      font-weight: 600;
+      border-bottom: 2px solid $darkBlack;
     }
   }
   &__card {
     width: 100%;
     position: relative;
     transition: width 0.3s ease-out;
-    animation: moveUp 0.5s linear;
-    animation-fill-mode: forwards;
     opacity: 0;
+
+    @mixin atSmall {
+      margin-right: 1.5rem;
+    }
+    @mixin atLarge {
+      margin-right: 1.8rem;
+    }
 
     @mixin atSmallMedium {
       width: 45%;
