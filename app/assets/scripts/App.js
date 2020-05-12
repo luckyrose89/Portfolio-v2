@@ -14,6 +14,7 @@ import FixedNav from "./modules/FixedNav";
 import Accordion from "./modules/Accordion";
 import FixedColumn from "./modules/FixedColumn";
 import TwitterFeed from "./modules/TwitterFeed";
+import Gallery from "./modules/Gallery";
 
 new Loading();
 new MobileMenu();
@@ -21,6 +22,7 @@ new SlideShow();
 new FixedNav();
 new Accordion();
 new FixedColumn();
+new Gallery();
 
 const header = document.querySelector(".site-header");
 const scrollTopBtn = document.querySelector(".footer__copyright--scroll-top");

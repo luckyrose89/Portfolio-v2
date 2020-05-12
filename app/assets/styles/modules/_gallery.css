@@ -24,7 +24,10 @@
     width: 100%;
     position: relative;
     transition: width 0.3s ease-out;
-    cursor: pointer;
+    animation: moveUp 0.5s linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
     @mixin atSmallMedium {
       width: 45%;
     }
@@ -139,7 +142,7 @@
         cursor: pointer;
         margin: 0;
         transform: scale(1) translateZ(0);
-        transition: all 0.3s ease-in;
+        transition: all 0.1s ease-in;
 
         &--icon {
           color: $mainPink;
@@ -171,5 +174,17 @@
   }
   to {
     background-position: 100% 0;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
