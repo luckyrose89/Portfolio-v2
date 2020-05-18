@@ -58,7 +58,11 @@
       <!--Large hero slider begins-->
       <div class="large-hero">
         <div class="large-hero__slider">
-          <div class="large-hero__slide large-hero__slide--slide1">
+          <span
+            class="large-hero__slide large-hero__slide--slide1"
+            role="img"
+            aria-label="keyboard image"
+          >
             <div class="large-hero__overlay">
               <div class="large-hero__overlay--text-content">
                 <div class="large-hero__overlay--wrapper">
@@ -73,8 +77,12 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="large-hero__slide large-hero__slide--slide2">
+          </span>
+          <span
+            class="large-hero__slide large-hero__slide--slide2"
+            role="img"
+            aria-label="code image"
+          >
             <div class="large-hero__overlay">
               <div
                 class="large-hero__overlay--text-content large-hero__overlay--text-content__centered"
@@ -91,8 +99,12 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="large-hero__slide large-hero__slide--slide3">
+          </span>
+          <span
+            class="large-hero__slide large-hero__slide--slide3"
+            role="img"
+            aria-label="workstation image"
+          >
             <div class="large-hero__overlay">
               <div
                 class="large-hero__overlay--text-content large-hero__overlay--text-content__centered"
@@ -109,20 +121,26 @@
                 </div>
               </div>
             </div>
-          </div>
+          </span>
 
           <div class="slide-controls--bottom">
-            <button class="slide-controls__button slide-controls--prev">
+            <button
+              class="slide-controls__button slide-controls--prev"
+              name="slide-back"
+            >
               &#10094;
             </button>
-            <button class="slide-controls__button slide-controls--next">
+            <button
+              class="slide-controls__button slide-controls--next"
+              name="slide-forward"
+            >
               &#10095;
             </button>
           </div>
           <div class="slide-progress slide-progress--bottom">
-            <span class="slide-progress--bar"></span>
-            <span class="slide-progress--bar"></span>
-            <span class="slide-progress--bar"></span>
+            <span class="slide-progress--bar" role="progressbar"></span>
+            <span class="slide-progress--bar" role="progressbar"></span>
+            <span class="slide-progress--bar" role="progressbar"></span>
           </div>
         </div>
       </div>
@@ -194,10 +212,12 @@
                     Excepteur sint occaecat cupidatat non proident, sunt in anim
                     id est laborum.
                   </p>
-                  <button class="btn btn--cta">
-                    <span class="btn--right"
-                      ><i class="fas fa-angle-right"></i></span
-                    ><span class="btn--text">View Work</span>
+                  <button class="btn btn--cta" name="portfolio">
+                    <a href="portfolio.html">
+                      <span class="btn--right"
+                        ><i class="fas fa-angle-right"></i></span
+                      ><span class="btn--text">View Work</span>
+                    </a>
                   </button>
                 </div>
               </div>
@@ -385,7 +405,7 @@
                     HTML, CSS, Javascript, Python, Flask & SQL.
                   </p>
                 </div>
-                <button class="btn btn--cta btn--top-margin">
+                <button class="btn btn--cta btn--top-margin" name="resume-link">
                   <span class="btn--right"
                     ><i class="fas fa-angle-right"></i
                   ></span>
@@ -597,7 +617,7 @@
                   <h4>My twitter</h4>
                   <div class="footer__twitter-feed"></div>
                   <button
-                    class="footer__twitter-feed--control footer__twitter-feed--control--first ctrl-left "
+                    class="footer__twitter-feed--control footer__twitter-feed--control--first ctrl-left"
                   >
                     <i class="fas fa-long-arrow-alt-left"></i>
                   </button>

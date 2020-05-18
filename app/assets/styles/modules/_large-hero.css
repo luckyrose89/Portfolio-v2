@@ -18,15 +18,33 @@
     }
 
     &--slide1 {
-      background-image: url("assets/images/keyboard.jpg");
+      background-image: url("assets/images/keyboard-small.jpg");
+      @mixin atSmall {
+        background-image: url("assets/images/keyboard-medium.jpg");
+      }
+      @mixin atLarge {
+        background-image: url("assets/images/keyboard-large.jpg");
+      }
     }
 
     &--slide2 {
-      background-image: url("assets/images/source-code.jpg");
+      background-image: url("assets/images/source-code--small.jpg");
+      @mixin atSmall {
+        background-image: url("assets/images/source-code--medium.jpg");
+      }
+      @mixin atLarge {
+        background-image: url("assets/images/source-code--large.jpg");
+      }
     }
 
     &--slide3 {
-      background-image: url("assets/images/workstation.jpg");
+      background-image: url("assets/images/workstation-small.jpg");
+      @mixin atSmall {
+        background-image: url("assets/images/workstation-medium.jpg");
+      }
+      @mixin atLarge {
+        background-image: url("assets/images/workstation-large.jpg");
+      }
     }
   }
 
@@ -54,6 +72,11 @@
       }
       &__centered {
         padding-left: 0;
+      }
+
+      h4:hover {
+        color: $mainPink;
+        cursor: pointer;
       }
     }
 

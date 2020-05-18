@@ -12,6 +12,7 @@ class Gallery {
   }
 
   events() {
+    if (!this.gallery) return;
     this.removeCards();
     this.galleryMenu[0].classList.add("gallery__menu--active");
     this.appendcards(this.cards);
