@@ -10,7 +10,7 @@ class FixedColumn {
     this.images = {
       about: "assets/images/about.jpg",
       resume: "assets/images/resume.jpg",
-      skills: "assets/images/game-keyboard.jpg"
+      skills: "assets/images/game-keyboard.jpg",
     };
     this.mediaQuery = window.matchMedia("(min-width: 1100px)");
     this.events();
@@ -18,10 +18,12 @@ class FixedColumn {
   events() {
     if (!this.fixedColumn) return;
     this.setBanner("about");
-    document.addEventListener("gumshoeActivate", event =>
+    document.addEventListener("gumshoeActivate", (event) =>
       this.updateFixedColumn(event)
     );
-    window.addEventListener("resize", () => this.updateOnresize());
+    if (this.fixedColumn) {
+      window.addEventListener("resize", () => this.updateOnresize());
+    }
   }
 
   updateOnresize() {
