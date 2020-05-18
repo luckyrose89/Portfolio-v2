@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -56,13 +56,10 @@
         </div>
       </header>
       <!--Large hero slider begins-->
-      <div class="large-hero">
+      <section class="large-hero">
         <div class="large-hero__slider">
-          <span
-            class="large-hero__slide large-hero__slide--slide1"
-            role="img"
-            aria-label="keyboard image"
-          >
+          <div class="large-hero__slide large-hero__slide--slide1">
+            <span role="img" aria-label="backlit keyboard image"> </span>
             <div class="large-hero__overlay">
               <div class="large-hero__overlay--text-content">
                 <div class="large-hero__overlay--wrapper">
@@ -72,19 +69,19 @@
                   <h4
                     class="headline headline__sub-heading headline--spacing headline--left"
                   >
-                    <a href="#about">
+                    <a
+                      href="#about"
+                      aria-label="Scroll down to read more details"
+                    >
                       Let's Start
                     </a>
                   </h4>
                 </div>
               </div>
             </div>
-          </span>
-          <span
-            class="large-hero__slide large-hero__slide--slide2"
-            role="img"
-            aria-label="code image"
-          >
+          </div>
+          <div class="large-hero__slide large-hero__slide--slide2">
+            <span role="img" aria-label="coding screen image"> </span>
             <div class="large-hero__overlay">
               <div
                 class="large-hero__overlay--text-content large-hero__overlay--text-content__centered"
@@ -96,19 +93,19 @@
                     View my last work
                   </h1>
                   <h4 class="headline headline__sub-heading headline--spacing">
-                    <a href="portfolio.html">
+                    <a
+                      href="portfolio.html"
+                      aria-label="click to visit portfolio page"
+                    >
                       My portfolio
                     </a>
                   </h4>
                 </div>
               </div>
             </div>
-          </span>
-          <span
-            class="large-hero__slide large-hero__slide--slide3"
-            role="img"
-            aria-label="workstation image"
-          >
+          </div>
+          <div class="large-hero__slide large-hero__slide--slide3">
+            <span role="img" aria-label="workstation image"> </span>
             <div class="large-hero__overlay">
               <div
                 class="large-hero__overlay--text-content large-hero__overlay--text-content__centered"
@@ -120,14 +117,17 @@
                     Get in touch
                   </h1>
                   <h4 class="headline headline__sub-heading headline--spacing">
-                    <a href="contact.html">
+                    <a
+                      href="contact.html"
+                      aria-label="click to visit contact page"
+                    >
                       Contact
                     </a>
                   </h4>
                 </div>
               </div>
             </div>
-          </span>
+          </div>
 
           <div class="slide-controls--bottom">
             <button
@@ -149,7 +149,7 @@
             <span class="slide-progress--bar" role="progressbar"></span>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-----Side Column Fixed-------->
       <div class="fixed-column">
@@ -181,7 +181,7 @@
         </div>
         <div class="inner-wrapper__content">
           <!----About Section Begins------>
-          <div class="section section__padding">
+          <section class="section section__padding">
             <div class="container">
               <div class="section__tag" id="about">
                 <h3 class="section__heading">Who am i</h3>
@@ -215,18 +215,16 @@
                     <span class="text-content__highlight">developer</span>
                   </h3>
                   <p class="text-content__justify text-content__description">
-                    Asunt in anim uis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in anim
-                    id est laborum. Allamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Aser velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in anim id est laborum.
+                    Hi, I'm Divya, a web developer striving to create faster and
+                    more accessible web experiences. I specialize in building
+                    web applications with a mobile first RWD within the
+                    Javascript ecosystem. I take interest in how technologies
+                    work under the hood and dig deeper to learn more.
                   </p>
                   <p class="text-content__justify text-content__description">
-                    Aser velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in anim
-                    id est laborum.
+                    Currently, I'm learning about the development of
+                    lightweight, scalable applications that rely largely on
+                    vanilla Javascript.
                   </p>
                   <button class="btn btn--cta" name="portfolio">
                     <a href="portfolio.html">
@@ -238,11 +236,11 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <!----About Section Ends------>
 
           <!----Resume Section Begins------>
-          <div class="section">
+          <section class="section">
             <div class="container">
               <div class="section__tag" id="resume">
                 <h3 class="section__heading">My Bio</h3>
@@ -429,11 +427,11 @@
                 </button>
               </div>
             </div>
-          </div>
+          </section>
           <!----Resume Section Ends------>
 
           <!----Skills Section Begins------>
-          <div class="section">
+          <section class="section">
             <div class="container">
               <div class="section__tag" id="skills">
                 <h3 class="section__heading">Attainments</h3>
@@ -596,7 +594,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <!----skills Section Ends------>
           <!--------Footer Begins-------->
           <footer class="section footer">
