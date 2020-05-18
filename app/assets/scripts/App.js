@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/js/brands";
 import "gumshoejs/src/js/gumshoe/_closest.polyfill";
 import "gumshoejs/src/js/gumshoe/_customEvent.polyfill";
 import "hammerjs";
+import "lazysizes";
 import Gumshoe from "gumshoejs/src/js/gumshoe/gumshoe";
 import Loading from "./modules/Loading";
 import MobileMenu from "./modules/MobileMenu";
@@ -36,18 +37,18 @@ if (document.querySelector(".fixed-column__image-container--home")) {
   const spy = new Gumshoe(".fixed-nav__list a", {
     navClass: "fixed-nav__highlight",
     reflow: true,
-    offset: function() {
+    offset: function () {
       return header.getBoundingClientRect().height;
     },
     events: true,
-    reflow: true
+    reflow: true,
   });
 
   spy.detect();
 }
 
 // Function to format dates for twitter feed
-const formatDate = function(date) {
+const formatDate = function (date) {
   let d = new Date(date);
   let months = [
     "January",
@@ -61,7 +62,7 @@ const formatDate = function(date) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   let month = months[d.getMonth()];
@@ -77,14 +78,14 @@ const formatDate = function(date) {
 // fetch twitter feed data
 
 fetch(twitterUrl)
-  .then(function(response) {
+  .then(function (response) {
     if (response.status !== 200) {
       console.log(
         "Looks like there was a problem. Status Code: " + response.status
       );
       return;
     }
-    response.json().then(function(data) {
+    response.json().then(function (data) {
       for (var i = 0; i < 3; i++) {
         let listItem = document.createElement("div");
         let html =
@@ -106,12 +107,12 @@ fetch(twitterUrl)
       new TwitterFeed();
     });
   })
-  .catch(function(err) {
+  .catch(function (err) {
     console.log("Fetch Error :-S", err);
   });
 
 // add event listener to scroll top button in footer
-scrollTopBtn.addEventListener("click", function() {
+scrollTopBtn.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });

@@ -2547,6 +2547,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
+lazysizes@^5.2.1-rc1:
+  version "5.2.1-rc1"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.1-rc1.tgz#ea39ea5dea575ca02faf37b30f86bb850afb7212"
+  integrity sha512-l8qae2nnoCvwVdRKmlcjj1tWGSfxtuNF755eKijs966pCENweqj07eInpwsFOBxRcn6qOS4ZQx6+zQ6jnzJHIQ==
+
 lcid@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-2.0.0.tgz#6ef5d2df60e52f82eb228a4c373e8d1f397253cf"

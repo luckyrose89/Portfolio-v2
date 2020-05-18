@@ -13,6 +13,11 @@
   &__sub-heading {
     font-size: 1.5rem;
     padding-bottom: 0;
+    margin-top: 1.2rem;
+
+    @mixin atMedium {
+      margin-top: 0.5rem;
+    }
   }
 
   &--spacing {

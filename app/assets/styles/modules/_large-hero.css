@@ -74,7 +74,11 @@
         padding-left: 0;
       }
 
-      h4:hover {
+      a {
+        color: #ffffff;
+      }
+
+      h4 a:hover {
         color: $mainPink;
         cursor: pointer;
       }

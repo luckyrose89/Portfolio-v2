@@ -13,6 +13,7 @@
     "filterizr": "^2.2.4",
     "gumshoejs": "^5.1.2",
     "hammerjs": "^2.0.8",
+    "lazysizes": "^5.2.1-rc1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

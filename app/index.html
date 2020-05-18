@@ -72,7 +72,9 @@
                   <h4
                     class="headline headline__sub-heading headline--spacing headline--left"
                   >
-                    Let's Start
+                    <a href="#about">
+                      Let's Start
+                    </a>
                   </h4>
                 </div>
               </div>
@@ -94,7 +96,9 @@
                     View my last work
                   </h1>
                   <h4 class="headline headline__sub-heading headline--spacing">
-                    My portfolio
+                    <a href="portfolio.html">
+                      My portfolio
+                    </a>
                   </h4>
                 </div>
               </div>
@@ -116,7 +120,9 @@
                     Get in touch
                   </h1>
                   <h4 class="headline headline__sub-heading headline--spacing">
-                    Contact
+                    <a href="contact.html">
+                      Contact
+                    </a>
                   </h4>
                 </div>
               </div>
@@ -188,7 +194,17 @@
                 <div
                   class="column__smaller column--margin-right column--content-center"
                 >
-                  <img src="./assets/images/profile.jpg" />
+                  <picture>
+                    <soure
+                      data-srcset="./assets/images/profile.jpg"
+                      media="(min-width:530px)"
+                    ></soure>
+                    <img
+                      class="lazyload"
+                      srcset="./assets/images/profile-min.jpg 658w"
+                      alt="profile image"
+                    />
+                  </picture>
                 </div>
                 <div class="column__large">
                   <h4 class="section__heading section__heading--grey">
