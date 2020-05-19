@@ -25,6 +25,15 @@ const twitterFeed = document.querySelector(".footer__twitter-feed");
 const twitterUrl =
   "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.app%2Ffeeds%2FQcPOZnueFlV97i7f.xml&api_key=cewflxnhxawfvh5qgyh98ltpzrvhfnugmeifd57h";
 
+const portfolioImages = [
+  "assets/images/travel-site.png",
+  "assets/images/jobsOnTheGo.png",
+  "assets/images/file-metadata-app.png",
+  "assets/images/exercise-tracker.png",
+  "assets/images/journal-app.png",
+  "assets/images/whack-a-mole.png",
+];
+
 // Initialize an instance of gumshoe js to enable scroll spy
 // if user is on home page
 if (document.querySelector(".fixed-column__image-container--home")) {
@@ -39,6 +48,14 @@ if (document.querySelector(".fixed-column__image-container--home")) {
   });
 
   spy.detect();
+}
+
+// preload portfolio gallery images if gallery element
+if (document.querySelector(".gallery")) {
+  portfolioImages.forEach(function (url) {
+    var img = new Image();
+    img.src = url;
+  });
 }
 
 // Function to format dates for twitter feed
