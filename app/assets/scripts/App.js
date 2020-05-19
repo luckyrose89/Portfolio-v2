@@ -6,7 +6,6 @@ import "@fortawesome/fontawesome-free/js/brands";
 import "gumshoejs/src/js/gumshoe/_closest.polyfill";
 import "gumshoejs/src/js/gumshoe/_customEvent.polyfill";
 import "hammerjs";
-import "lazysizes";
 import Gumshoe from "gumshoejs/src/js/gumshoe/gumshoe";
 import Loading from "./modules/Loading";
 import MobileMenu from "./modules/MobileMenu";
