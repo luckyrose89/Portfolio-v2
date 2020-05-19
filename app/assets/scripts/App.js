@@ -1,11 +1,6 @@
 import "../styles/styles.css";
-import "@fortawesome/fontawesome-free/js/fontawesome";
-import "@fortawesome/fontawesome-free/js/solid";
-import "@fortawesome/fontawesome-free/js/regular";
-import "@fortawesome/fontawesome-free/js/brands";
 import "gumshoejs/src/js/gumshoe/_closest.polyfill";
 import "gumshoejs/src/js/gumshoe/_customEvent.polyfill";
-import "hammerjs";
 import Gumshoe from "gumshoejs/src/js/gumshoe/gumshoe";
 import Loading from "./modules/Loading";
 import MobileMenu from "./modules/MobileMenu";

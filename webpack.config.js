@@ -1,8 +1,11 @@
 const currentTask = process.env.npm_lifecycle_event;
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fse = require("fs-extra");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 const postCSSPlugins = [
   require("postcss-import"),
@@ -12,6 +15,14 @@ const postCSSPlugins = [
   require("postcss-hexrgba"),
   require("autoprefixer"),
 ];
+
+class RunAfterCompile {
+  apply(compiler) {
+    compiler.hooks.done.tap("Copy images", function () {
+      fse.copySync("./app/assets/images", "./dist/assets/images");
+    });
+  }
+}
 
 let pages = fse
   .readdirSync("./app")
@@ -25,29 +36,29 @@ let pages = fse
     });
   });
 
+let cssConfig = {
+  test: /\.css$/i,
+  use: [
+    "css-loader?url=false",
+    { loader: "postcss-loader", options: { plugins: postCSSPlugins } },
+  ],
+};
+
 let config = {
   entry: "./app/assets/scripts/App.js",
   plugins: pages,
   module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          "style-loader",
-          "css-loader?url=false",
-          { loader: "postcss-loader", options: { plugins: postCSSPlugins } },
-        ],
-      },
-    ],
+    rules: [cssConfig],
   },
 };
 
 if (currentTask == "dev") {
+  cssConfig.use.unshift("style-loader");
   config.output = {
     filename: "bundled.js",
     path: path.resolve(__dirname, "app"),
   };
-
+  config.plugins.push(new BundleAnalyzerPlugin());
   config.devServer = {
     before: function (app, server) {
       server._watch("./app/**/*.html");
@@ -62,6 +73,8 @@ if (currentTask == "dev") {
 }
 
 if (currentTask == "build") {
+  cssConfig.use.unshift(MiniCssExtractPlugin.loader);
+  postCSSPlugins.push(require("cssnano"));
   config.output = {
     filename: "[name].[chunkhash].js",
     chunkFilename: "[name].[chunkhash].js",
@@ -75,7 +88,13 @@ if (currentTask == "build") {
     },
   };
 
-  config.plugins = [new CleanWebpackPlugin()];
+  config.plugins.push(
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "styles.[chunkhash].css",
+    }),
+    new RunAfterCompile()
+  );
 }
 
 module.exports = config;
