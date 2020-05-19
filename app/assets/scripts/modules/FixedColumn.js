@@ -21,13 +21,12 @@ class FixedColumn {
     document.addEventListener("gumshoeActivate", (event) =>
       this.updateFixedColumn(event)
     );
-    if (this.fixedColumn) {
-      window.addEventListener("resize", () => this.updateOnresize());
-    }
+    window.addEventListener("resize", () => this.updateOnresize());
   }
 
   updateOnresize() {
     let activeLink = document.querySelector(".fixed-nav__highlight");
+    if (!activeLink) return;
     this.setBanner(activeLink.getAttribute("data-link"));
   }
 
